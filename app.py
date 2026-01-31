@@ -1,5 +1,6 @@
 import streamlit as st
-import google.genai as genai
+import google.generativeai as genai
+
 import chromadb
 import pandas as pd
 from chromadb.utils.embedding_functions import GoogleGenerativeAiEmbeddingFunction
@@ -73,4 +74,5 @@ if st.button("Submit"):
         with st.spinner("Thinking..."):
             answer = ask_stellaria(user_question)
             st.write("**Answer:**", answer)
+
 
